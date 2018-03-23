@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	api_key: '8c089170d31ea3b11f1ea65dbfc8ea46',
+	base_uri: `https://api.nextbigsound.com`
 };

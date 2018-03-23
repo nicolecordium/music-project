@@ -1,0 +1,6 @@
+<div class="event-data-container">
+	<div *ngFor="let week of weekKeys" class="week-visualization">
+		<span>{{ week }}</span>
+		<app-event-visualization [weekEvents]="events[week]" [uniqueId]="week"></app-event-visualization>
+	</div>
+</div>
