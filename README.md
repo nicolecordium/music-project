@@ -4,12 +4,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Running the application
 
-Run `yarn` or `npm install` to install all dependencies before attempting to build or run the server. 
-Ensure you have a `.env` file in the root folder with values `API_KEY=8c089170d31ea3b11f1ea65dbfc8ea46`.
-Run `npm run start` to run the client applicaton and Node API server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Run `yarn` or `npm install` to install all dependencies before attempting to build or run the server. 
+2. Ensure you have a `.env` file in the root folder with values `API_KEY={{API_KEY_HERE}}` and 
+`BASE_URI=https://api.nextbigsound.com`. Also make sure those values are in `src\environments\environment.ts`.
+3. Run `npm run start` to run the client applicaton and Node API server. 
+4. Navigate to `http://localhost:4200/`.
 
 ## Using the application
 
-Enter an artist in the input and click the Search button. 
-Select an artist from the list that appears below.
-A visualization of data for the artist's activity over the past year will be displayed below. 
+1. Enter an artist in the input and click the Search button. 
+2. Select an artist from the list that appears below.
+3. A visualization of data for the artist's activity over the past year will be displayed below. 
