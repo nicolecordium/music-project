@@ -8,8 +8,8 @@ import { environment } from 'environments/environment';
 @Injectable()
 export class SearchService {
 	// NW [EXPLANATION] 3/22/18: would rather use process.env here but having trouble accessing it in this context
-	private accessToken: string = environment.api_key;
-	private baseUri: string = environment.base_uri;
+	private accessToken: string = environment.API_KEY;
+	private baseUri: string = environment.BASE_URI;
 
 	constructor(private http: HttpClient) {
 	}
