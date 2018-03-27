@@ -5,6 +5,6 @@
 
 export const environment = {
 	production: false,
-	API_KEY: '8c089170d31ea3b11f1ea65dbfc8ea46',
+	API_KEY: 'API_KEY_HERE',
 	BASE_URI: 'https://api.nextbigsound.com'
 };

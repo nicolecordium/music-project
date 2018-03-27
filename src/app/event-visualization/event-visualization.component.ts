@@ -6,8 +6,7 @@ import { VisualizationService } from '../services'
 
 @Component({
 	selector: 'app-event-visualization',
-	templateUrl: `./event-visualization.component.html`,
-	styleUrls: ['./event-visualization.component.scss']
+	templateUrl: `./event-visualization.component.html`
 })
 export class EventVisualizationComponent implements OnInit, OnChanges {
 	@Input() data: Events;
@@ -30,7 +29,6 @@ export class EventVisualizationComponent implements OnInit, OnChanges {
 	ngOnInit() {
 		this.links = [];
 		this.nodes = [];
-		/** Receiving an initialized simulated graph from our custom d3 service */
 		this.graph = this.visualizationService.getForceDirectedGraph(this.nodes, this.links, this.options);
 	}
 
@@ -46,12 +44,13 @@ export class EventVisualizationComponent implements OnInit, OnChanges {
 			for (let weekName in this.data) {
 				const weekNodes: D3Node[] = [];
 
+				// create a node for each event type in a week
 				for (let propertyName in this.data[weekName]) {
 					const id = weekName + '.' + propertyName;
 					const eventName = this.getEventTypeFromPropertyName(propertyName);
 					const eventDate = this.getEventDateFromPropertyName(weekName);
-					const fontSize = this.data[weekName][propertyName];
-					const eventNode = new D3Node(id, eventName, eventDate, fontSize);
+					const size = this.data[weekName][propertyName];
+					const eventNode = new D3Node(id, eventName, eventDate, size);
 					this.nodes.push(eventNode);
 					weekNodes.push(eventNode);
 				}

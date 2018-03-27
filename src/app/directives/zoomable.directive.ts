@@ -1,3 +1,5 @@
+// from https://medium.com/netscape/visualizing-data-with-angular-and-d3-209dde784aeb
+
 import { Directive, Input, ElementRef } from '@angular/core';
 import { VisualizationService } from '../services';
 
