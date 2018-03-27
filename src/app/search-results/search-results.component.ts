@@ -7,6 +7,8 @@ import { SearchResult, Artist } from '../models/index';
 	styleUrls: ['./search-results.component.scss']
 })
 export class SearchResultsComponent {
+	private selectedArtist: Artist;
+
 	@Input() searchResults: SearchResult;
 	@Output() artistSelected: EventEmitter<any> = new EventEmitter<any>();
 
@@ -16,5 +18,13 @@ export class SearchResultsComponent {
 
 	onArtistClick(artist: Artist) {
 		this.artistSelected.emit(artist);
+		this.selectedArtist = artist;
+	}
+
+	isArtistSelected(artist: Artist) {
+		if (this.selectedArtist && this.selectedArtist.id == artist.id) {
+			return true;
+		}
+		return false;
 	}
 }

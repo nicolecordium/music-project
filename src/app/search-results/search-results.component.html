@@ -1,10 +1,11 @@
 <div class="artist-results-container" *ngIf="searchResults && searchResults.artists">
-	<div class="artist-result" *ngFor="let artist of searchResults.artists" (click)="onArtistClick(artist)">
+	<div class="artist-result" *ngFor="let artist of searchResults.artists" (click)="onArtistClick(artist)"
+		[class.selected]="isArtistSelected(artist)">
 		<div class="artist-avatar">
 			<div *ngIf="artist.images && artist.images.length">
 				<img [src]="getArtistImage(artist)" />
 			</div>
 		</div>
-		{{ artist.name }}
+		<span class="artist-name">{{ artist.name }}</span>		
 	</div>
 </div>

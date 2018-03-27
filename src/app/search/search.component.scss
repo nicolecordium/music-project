@@ -1,0 +1,10 @@
+.search-container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+}

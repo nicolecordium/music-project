@@ -1,6 +1,4 @@
 <div class="event-data-container">
-	<div *ngFor="let week of weekKeys" class="week-visualization">
-		<span>{{ week }}</span>
-		<app-event-visualization [weekEvents]="events[week]" [uniqueId]="week"></app-event-visualization>
-	</div>
+	<div *ngIf="artist" class="artist-heading">Viewing data for {{ artist.name }}</div>
+	<app-event-visualization [data]="events"></app-event-visualization>
 </div>

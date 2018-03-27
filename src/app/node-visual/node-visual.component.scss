@@ -1,0 +1,17 @@
+.node {
+    cursor: pointer;
+    transition: stroke-width 0.1s ease-out,
+        fill 0.1s ease-out,
+        stroke 0.1s ease-out;
+
+    stroke: white;
+	stroke-width: 0.25;
+	fill: lightgray;
+}
+
+.node-name,
+.node-date {
+  text-anchor: middle;
+  font-weight: 300;
+  fill: black;
+}

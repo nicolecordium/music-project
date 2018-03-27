@@ -1,3 +1,22 @@
 .app-container {
-	flex: 1;
+	display: flex;
+	height: 100vh;
+	font-family: Arial,Helvetica,sans-serif;
+
+	> div {
+		padding: 2rem;
+		flex: 1;
+		max-width: 50%;
+		display: flex;
+	}
 }
+
+.left-panel {
+	background-color: lightgrey;
+	flex-direction: column;
+    overflow-y: auto;
+}
+
+// .right-panel {
+// 	background-color: black;
+// }

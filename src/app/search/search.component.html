@@ -1,5 +1,9 @@
-Search for an artist to see activity in the past year:
-<form [formGroup]="searchFormGroup" (ngSubmit)="emitSearchTerm()">
-	<input formControlName="textInput" type="text" />
-	<button type="submit">Search</button>
-</form>
+<div class="search-container">
+	<form [formGroup]="searchFormGroup" (ngSubmit)="emitSearchTerm()">
+		Search for an artist to see activity in the past year:
+		<input formControlName="textInput" type="text" />
+		<div class="form-actions">
+			<button type="submit" [disabled]="searchFormGroup.invalid">Search</button>
+		</div>
+	</form>
+</div>

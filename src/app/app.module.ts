@@ -7,9 +7,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
-import { SearchService, EventsService } from './services';
+import { SearchService, EventsService, VisualizationService } from './services';
 import { EventDataComponent } from './event-data/event-data.component';
 import { EventVisualizationComponent } from './event-visualization/event-visualization.component';
+import { NodeVisualComponent } from './node-visual/node-visual.component';
+import { LinkVisualComponent } from './link-visual/link-visual.component';
+import { ZoomableDirective } from './directives/zoomable.directive';
+import { DraggableDirective } from './directives/draggable.directive';
 
 @NgModule({
 	declarations: [
@@ -17,7 +21,11 @@ import { EventVisualizationComponent } from './event-visualization/event-visuali
 		SearchComponent,
 		SearchResultsComponent,
 		EventDataComponent,
-		EventVisualizationComponent
+		EventVisualizationComponent,
+		NodeVisualComponent,
+		LinkVisualComponent,
+		ZoomableDirective,
+		DraggableDirective
 	],
 	imports: [
 		BrowserModule,
@@ -27,7 +35,8 @@ import { EventVisualizationComponent } from './event-visualization/event-visuali
 	],
 	providers: [
 		SearchService,
-		EventsService
+		EventsService,
+		VisualizationService
 	],
 	bootstrap: [AppComponent]
 })
