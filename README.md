@@ -21,5 +21,8 @@ Nodes are draggable and zoomable for more detail.
 
 ## Implementation
 
-The visualization comes from this resource: https://medium.com/netscape/visualizing-data-with-angular-and-d3-209dde784aeb
+- Angular single-page application
+- Hits Next Big Sound APIs for artist search and event data
+- Express API runs on `localhost:8081`
+- The visualization is adapted from this resource: https://medium.com/netscape/visualizing-data-with-angular-and-d3-209dde784aeb
 It's a great tutorial for utilizing the d3 library with Angular!
