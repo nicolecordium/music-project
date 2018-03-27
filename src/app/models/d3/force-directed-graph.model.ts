@@ -1,6 +1,5 @@
 import { EventEmitter } from '@angular/core';
-import { Link } from './link';
-import { D3Node } from './node';
+import { Link, D3Node } from './index';
 import * as d3 from 'd3';
 
 const FORCES = {

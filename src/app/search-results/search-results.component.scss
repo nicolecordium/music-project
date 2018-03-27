@@ -20,11 +20,11 @@
 	padding: 10px;
 
 	img {
-		border: 2px black solid;
+		border: 2px white solid;
 		border-radius: 40px;
 
 		.selected & {
-			border-color: white;
+			border-color: black;
 		}
 	}
 }

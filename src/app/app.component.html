@@ -1,7 +1,7 @@
 <div class="app-container">
 	<div class="left-panel">
 	<app-search (searchTermSubmit)="onSearchSubmit($event)"></app-search>
-	<app-search-results [searchResults]="(searchResults$ | async)"
+	<app-search-results [searchResults]="searchResults"
 			(artistSelected)="onArtistSelected($event)"></app-search-results>
 	</div>
 	<div class="right-panel">

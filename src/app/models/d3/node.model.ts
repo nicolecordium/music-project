@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-import { EventTypes } from '../../enums/enums';
 
 // Implementing SimulationNodeDatum interface into our custom Node class
 export class D3Node implements d3.SimulationNodeDatum {

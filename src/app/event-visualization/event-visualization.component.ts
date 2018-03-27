@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { ForceDirectedGraph, D3Node, Link } from '../models/d3';
-import { Events } from '../models/index';
-import { EventTypes } from '../enums/enums';
+import { Events, ForceDirectedGraph, D3Node, Link } from '../models';
+import { EventTypes } from '../enums';
 import { VisualizationService } from '../services'
 
 @Component({
@@ -17,10 +16,7 @@ export class EventVisualizationComponent implements OnInit, OnChanges {
 	graph: ForceDirectedGraph;
 
 	get options() {
-		return this._options = {
-			width: 500,
-			height: 500
-		};
+		return this._options;
 	}
 
 	constructor(private visualizationService: VisualizationService) {

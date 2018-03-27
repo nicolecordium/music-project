@@ -11,10 +11,11 @@ import { SearchResult, Artist, Events } from './models/index';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	searchResults$: Observable<SearchResult>;
+	searchResults: SearchResult;
 	eventResults: Events[];
-	eventSubscription: Subscription;
 	selectedArtist: Artist;
+	eventSubscription: Subscription;
+	searchSubscription: Subscription;
 
 	constructor(private searchService: SearchService,
 		private eventsService: EventsService) {
@@ -22,13 +23,15 @@ export class AppComponent {
 	}
 
 	onSearchSubmit(searchTerm: string) {
-		this.searchResults$ = this.searchService.search(searchTerm);
+		this.searchSubscription = this.searchService.search(searchTerm).subscribe((response) => {
+			this.searchResults = response.json();
+		});;
 	}
 
 	onArtistSelected(artist: Artist) {
 		this.selectedArtist = artist;
 		this.eventResults = [];
-		// NW [EXPLANATION] 3/22/18 - see services/events/events.service for explanation of different pattern than search submit
+
 		this.eventSubscription = this.eventsService.getEvents(artist.id).subscribe((response) => {
 			this.eventResults = response.json().counts;
 		});
