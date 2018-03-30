@@ -1,3 +1,5 @@
+// taken from https://medium.com/netscape/visualizing-data-with-angular-and-d3-209dde784aeb
+
 import { Injectable } from '@angular/core';
 import * as d3 from 'd3';
 import { ForceDirectedGraph, Link, D3Node } from '../../models';
